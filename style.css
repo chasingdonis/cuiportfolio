@@ -63,7 +63,7 @@ body {
   background-size: 100%;
   background-attachment: fixed;
   background-position: top center;
-  height: 1775px;
+  height: auto;
   background-repeat: no-repeat;
 }
 
@@ -932,17 +932,16 @@ object {
 .site-title {
     background-image: url("../../uploads/2016/04/cui_logo.png");
     background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
+    background-position: top center;
+    background-size: 45%;
+    background-attachment: fixed;
+    top: -80px;
     height: 300px;
-    margin-left: 25％;
-    text-align: center;
+    position: relative;
 }
 
 .site-content {
-    background-image: url("../../uploads/2016/04/shape.png");
-    background-repeat: no-repeat;
-    height: 1235px;
+    height: auto;
 }
 
 .icons {
@@ -961,7 +960,6 @@ text-align: center;
 	ul.icons {
 			cursor: default;
 			list-style: none;
-			padding-left: 0;
 		}
 
 			ul.icons li {
@@ -987,7 +985,7 @@ text-align: center;
 				display: block;
 				float: left;
 				padding: 3em 0;
-				width: 50%;
+				width: 100%;
 			}
 
 				ul.icons-grid li h3 {
@@ -1028,4 +1026,61 @@ footer .entry-footer {
 font-family: "Alegreya Sans", sans-serif;
 text-align: center;
 font-size: 20px;
+}
+
+.entry-content{
+background-color: rgba(225,225,225,0.6);
+}
+
+.site-footer {
+position:absolute;
+margin-bottom: 20px;
+width: 100%;
+}
+
+.site-info p {
+position: absolute;
+text-align: center;
+padding-top: 15px;
+padding-left: 41%;
+}
+
+.site-footer ul{
+  margin-left: 32%;
+  padding-top: 10px;
+  list-style-type: none;
+}
+
+.site-footer ul li {
+    float: left;
+}
+
+.site-footer li a {
+    display: block;
+}
+
+.site-footer li img {
+width: 50%;
+}
+
+.entry-header {
+background-color: rgba(255,255,255,0.6);
+margin: 0 80px 0 105px;
+padding: 20px;
+}
+
+.entry-title {
+text-align: center;
+color: #000;
+}
+
+.page-header {
+text-align: center;
+}
+
+.home .entry-header {display: none;}
+.home .site-content {
+    background-image: url("../../uploads/2016/04/shape.png");
+    background-repeat: no-repeat;
+    height: 1250px;
 }
