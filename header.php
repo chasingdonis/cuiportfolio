@@ -18,7 +18,9 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo:400,700,400italic' rel='stylesheet' type='text/css'>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/main.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/jquery.js"></script>
+    
 <?php wp_head(); ?>
 </head>
 

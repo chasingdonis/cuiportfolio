@@ -76,6 +76,22 @@ function cuiportfolio_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+    
+    //Adds gallery shortcode defaults of size="medium" and columns="2"  
+
+function amethyst_gallery_atts( $out, $pairs, $atts ) {
+    $atts = shortcode_atts( array(
+      'columns' => '2',
+      'size' => 'full',
+    ), $atts );
+ 
+    $out['columns'] = $atts['columns'];
+    $out['size'] = $atts['size'];
+ 
+    return $out;
+ 
+}
+    add_filter( 'shortcode_atts_gallery', 'amethyst_gallery_atts', 10, 3 );
 }
 endif;
 add_action( 'after_setup_theme', 'cuiportfolio_setup' );
@@ -118,10 +134,9 @@ function cuiportfolio_scripts() {
 
 	wp_enqueue_script( 'cuiportfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
     
-   // wp_enqueue_script( 'Alegreya-Sans', 'http://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,500' );
+   wp_enqueue_style( 'jquery-script', get_template_directory_uri() . '/js/jquery.js');
     
-   // wp_enqueue_script( 'Arimo', 'https://fonts.googleapis.com/css?family=Arimo:400,700,400italic');
-
+     wp_enqueue_style( 'main-script', get_template_directory_uri() . '/js/main.js');
 
 	wp_enqueue_script( 'cuiportfolio-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
