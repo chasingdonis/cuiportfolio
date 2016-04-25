@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: app design post
+ * Template Name: web design post
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package cuiportfolio
@@ -14,7 +14,7 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content-app', 'post' );
+				get_template_part( 'template-parts/content-web', 'post' );
 
 				// If comments are open or we have at least one comment, load up the comment template.
 				//if ( comments_open() || get_comments_number() ) :

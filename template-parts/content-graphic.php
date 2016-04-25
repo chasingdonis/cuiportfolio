@@ -24,36 +24,17 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
-  <h3 class="project"><?php the_field('project_name'); ?></h3>
 <?php 
 
-$images = get_field('images');
+$image_ids = get_field('gallery', false, false);
 
-if( $images ): ?>
-    <ul>
-        <?php foreach( $images as $image ): ?>
-            <li>
-                <a href="<?php echo $image['url']; ?>">
-                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-                </a>
-                <p><?php echo $image['caption']; ?></p>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
+$shortcode = '[image ids="' . implode(',', $image_ids) . '"]';
 
-<?php 
+echo do_shortcode( $shortcode );
 
-$image = get_field('screenshot');
-
-if( !empty($image) ): ?>
-
-	<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-<?php endif; ?>
+?>
+                <p><?php the_field('description'); ?></p>
         
-        <p><?php the_field('description'); ?></p>
-        <p><?php the_field('features_and_funtionality'); ?></p>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

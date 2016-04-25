@@ -24,24 +24,8 @@
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
-  <h3 class="project"><?php the_field('project_name'); ?></h3>
-<?php 
-
-$images = get_field('images');
-
-if( $images ): ?>
-    <ul>
-        <?php foreach( $images as $image ): ?>
-            <li>
-                <a href="<?php echo $image['url']; ?>">
-                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
-                </a>
-                <p><?php echo $image['caption']; ?></p>
-            </li>
-        <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
-
+        <h3 class="name"><?php the_field('name_of_the_site'); ?></h3>
+        <p><?php the_field('description'); ?></p>
 <?php 
 
 $image = get_field('screenshot');
@@ -52,8 +36,6 @@ if( !empty($image) ): ?>
 
 <?php endif; ?>
         
-        <p><?php the_field('description'); ?></p>
-        <p><?php the_field('features_and_funtionality'); ?></p>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
