@@ -968,11 +968,11 @@ footer .entry-footer {
 }
 
 footer img:hover {
- border: 1px solid black;
+ border: 2px solid black;
 }
 
 footer img:active {
- border: 1px solid #ccc;
+ border: 2px solid #ccc;
 }
 
 .site-description {
