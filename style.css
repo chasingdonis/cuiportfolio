@@ -47,6 +47,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+
 html {
 	font-family: "Arimo", sans-serif;
 	-webkit-text-size-adjust: 100%;
@@ -65,6 +66,14 @@ body {
   background-position: top center;
   height: auto;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 37.5em) {
+#page{
+    background-color: white;
+     background-size: 180%;
+     height: 100%;
+	}
 }
 
 article,
@@ -570,7 +579,7 @@ a:active {
     padding: 20px;
     border: solid 2px;
     text-align: center;
-    width: 500px;
+    width: 50%;
     font-size: 1.5em;
     font: 13px Alegreya Sans, Helvetica, Arial, sans-serif;
 }
@@ -631,14 +640,58 @@ a:active {
   color: #a6bdd2;
 }
 
-
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+  float: right;
+  font-size: 1.5em;
+  padding: 2px;
+  margin-top: -10px;
+  list-style: none;
+  display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+.main-navigation.toggled li:hover ul {
+  display: inline-block; 
+  position: absolute;
+  margin-left: -13%;
+  margin-top: -35%;
+  padding-right: 0;
+}
+
+.main-navigation.toggled ul li {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+  .main-navigation.toggled a{  
+  display: block;
+  padding: 2px;
+  color: #FFF;
+  font-size: 19px;
+  line-height: 60px;
+  text-decoration: none;
+  }
+
+.main-navigation.toggled ul ul {
+  display: none;
+}
+
+.main-navigation.toggled ul li:hover > ul { display: inherit; width: 500px;}
+
+.main-navigation.toggled ul ul li {
+  width: 100%;
+  float: none;
+  position: relative;
+  display: inline-block;  
+}
+
+.main-navigation.toggled ul a {
+ width: 40%;} 
+
+
+@media screen and (min-width: 40em) {
 	.menu-toggle {
 		display: none;
 	}
@@ -975,6 +1028,7 @@ footer img:active {
  border: 2px solid #ccc;
 }
 
+
 .site-description {
 font-family: "Alegreya Sans", sans-serif;
 text-align: center;
@@ -1036,6 +1090,34 @@ padding-left: 41%;
 width: 50%;
 }
 
+@media screen and (max-width: 40em) {
+   .site-footer {
+ position: absolute;
+ margin-bottom: 20px;
+ left: 0;
+}
+    
+  .site-footer ul{
+  margin: 2px;
+  padding-top: 10px;
+  list-style-type: none;
+}
+    
+    .site-info p {
+  text-align: center; 
+  position: absolute;
+  padding-top: 30px;
+  padding-left: 25%;
+}
+
+    
+.site-footer li img {
+  width: 40%;
+  padding: 0;
+}
+    
+}
+
 .entry-header {
 background-color: rgba(255,255,255,0.6);
 margin: 0 10%;
@@ -1079,7 +1161,7 @@ text-align: center;
 .home .site-content p {
     position: absolute;
     margin-top: 32%;
-    margin-left: 15%;
+    margin-left: 12%;
     color: white;
 }
 
